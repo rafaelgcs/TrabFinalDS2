@@ -25,8 +25,10 @@ namespace VWEB.Models
 
       public System.Data.Entity.DbSet<VWEB.Models.Turma> Turmas { get; set; }
 
-        public System.Data.Entity.DbSet<VWEB.Models.Usuario> Usuarios { get; set; }
+      public System.Data.Entity.DbSet<VWEB.Models.Usuario> Usuarios { get; set; }
 
-        public System.Data.Entity.DbSet<VWEB.Models.Postagem> Postagems { get; set; }
+      public System.Data.Entity.DbSet<VWEB.Models.Postagem> Postagems { get; set; }
+        
+      public System.Data.Entity.DbSet<VWEB.Models.Mensagem> Mensagems { get; set; }
     }
 }
