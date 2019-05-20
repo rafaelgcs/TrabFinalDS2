@@ -1,0 +1,36 @@
+﻿@model VWEB.Models.Mensagem
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_TemplatePrincipal.cshtml";
+}
+
+<div class="card" style="width:60%;">
+    <h5 class="card-header white-text text-center py-4" style="background-color: green;">
+        <strong>Enviar Mensagem Normal</strong>
+    </h5>
+
+    <div class="card-body px-lg-5 pt-0" id="">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="md-form md-outline">
+                @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control validate ", maxlenght = "200", minlength = "5", style = "max-width='100% !important'" } })
+                @Html.LabelFor(model => model.Titulo, htmlAttributes: new { data_error = "Inválido", data_success = "" })
+            </div>
+            
+            <span>Público Alvo</span>
+            @Html.EnumDropDownListFor(model => model.TipoMensagem, new { @class = "browser-default custom-select", style = "border-radius:none;")
+
+            <div class="md-form md-outline">
+                @Html.TextAreaFor(model => model.Texto, new { @class = "md-textarea form-control validate", rows = "3", minlength = "30", maxlength = "600" })
+                @Html.LabelFor(model => model.Texto, htmlAttributes: new { data_error = "Inválido", data_success = "" })
+            </div>
+            
+            <button class="btn btn-outline-success btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Publicar Mensagem</button>
+        }
+
+
+    </div>
+
+</div>
