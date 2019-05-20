@@ -152,9 +152,19 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ResponsaveisController.cs" />
     <Compile Include="Controllers\TurmasController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904081727084_InitialCreate.cs" />
+    <Compile Include="Migrations\201904081727084_InitialCreate.Designer.cs">
+      <DependentUpon>201904081727084_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905200023109_InserindoTabelaAlunos.cs" />
+    <Compile Include="Migrations\201905200023109_InserindoTabelaAlunos.Designer.cs">
+      <DependentUpon>201905200023109_InserindoTabelaAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Matricula.cs" />
@@ -171,6 +181,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\login.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -221,6 +232,11 @@
     <Content Include="Views\Turmas\Edit.cshtml" />
     <Content Include="Views\Turmas\Index.cshtml" />
     <Content Include="Views\Shared\_TemplatePrincipal.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +253,14 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904081727084_InitialCreate.resx">
+      <DependentUpon>201904081727084_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905200023109_InserindoTabelaAlunos.resx">
+      <DependentUpon>201905200023109_InserindoTabelaAlunos.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
